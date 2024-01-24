@@ -1,0 +1,145 @@
+<ion-header class="ion-no-border">
+  <ion-item lines="none">
+    <ion-avatar slot="end">
+      <img src="assets/profile.jpg">
+    </ion-avatar>
+    <ion-button fill="clear" color="light">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-item lines="none">
+    <div class="ion-padding-start ion-padding-bottom">
+      <ion-label class="ion-text-center">
+        <h2>Dashboard</h2>
+      </ion-label>
+    </div>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card class="night" id="open-modalE">
+            <ion-card-content>
+              <div class="title">
+                <ion-icon name="book-outline" class="fl"></ion-icon>
+                <p>Livre Emprunté</p> 
+                <h2>4</h2>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-modal #modal trigger="open-modalE">
+          <ng-template>
+            <ion-content>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-button color="light" (click)="modal.dismiss()">Back</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+              <ion-list>
+                <ion-col size="12">
+                  <ion-card class="medium">
+                    <ion-row>
+                      <ion-col size="12">
+                        <ion-card-content>
+                          <div class="title">
+                            <ion-icon name="book-outline" class="fl"></ion-icon>
+                            <h2>titre du livre</h2>
+                            <ion-card-subtitle>Date de l'emprunt : </ion-card-subtitle>
+                            <ion-card-subtitle>Date prévu du retour : </ion-card-subtitle>
+                          </div>
+                        </ion-card-content>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card>
+                </ion-col>
+              </ion-list>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+        <ion-col size="6">
+          <ion-card class="medium" id="open-modalR">
+            <ion-card-content>
+              <div class="title">
+                <ion-icon name="calendar-number-outline" class="fl"></ion-icon>
+                <p>Livre Réservé</p> 
+                <h2>10</h2>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-modal #modal trigger="open-modalR">
+          <ng-template>
+            <ion-content>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-button color="light" (click)="modal.dismiss()">Back</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+              <ion-list>
+                <ion-col size="12">
+                  <ion-card class="medium">
+                    <ion-row>
+                      <ion-col size="12">
+                        <ion-card-content>
+                          <div class="title">
+                            <ion-icon name="book-outline" class="fl"></ion-icon>
+                            <h2>titre du livre</h2>
+                            <ion-card-subtitle>Date de la résérvation : </ion-card-subtitle>
+                          </div>
+                        </ion-card-content>
+                      </ion-col>
+                    </ion-row>
+                  </ion-card>
+                </ion-col>
+              </ion-list>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+        <ion-col size="6">
+          <ion-card class="medium">
+            <ion-card-content>
+              <div class="title">
+                <ion-icon name="calendar-number-outline" class="fl"></ion-icon>
+                <p>Livre Aimé</p> 
+                <h2>10</h2>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12">
+          <ion-card class="medium">
+            <ion-row>
+              <ion-col size="12">
+                <ion-card-content>
+                  <div class="title">
+                    <ion-icon name="time-outline" class="fl"></ion-icon>
+                    <h2>Historique du Compte</h2>
+                  </div>
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12">
+          <ion-card class="medium">
+            <ion-row>
+              <ion-col size="12">
+                <ion-card-content>
+                  <div class="title">
+                    <ion-icon name="alert-circle-outline" class="fl"></ion-icon>
+                    <h2>Attention ! !</h2>
+                    <p>Date de retour du livre (livre) Dépassé!</p> 
+                  </div>
+                </ion-card-content>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
