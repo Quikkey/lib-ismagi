@@ -1,0 +1,7 @@
+{
+  "name": "LibIsmagi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
